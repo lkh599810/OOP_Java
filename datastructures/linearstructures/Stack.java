@@ -5,6 +5,7 @@ import datastructures.linearstructures.node.Node;
 import javax.sound.midi.Soundbank;
 
 public class Stack<T> extends LinkedList{
+
     public Stack(){
         super();
     }
@@ -48,6 +49,7 @@ public class Stack<T> extends LinkedList{
     public Object pop(){
         //전체 질문: this.count와 super.count의 차이... 언제 뭘 써야하는지, 어떻게 구별하는지 등
         //전체 질문: public T pop(){}으로 짜니까 Object로 쓰라고 에러남. 제네릭 T와 object의 차이?
+        //pop 구현 혹은 deleteNode 다형성?이용 재정의
         Object objectValue=super.get(super.count-1);
         deleteNode(super.count-1);
         return objectValue;

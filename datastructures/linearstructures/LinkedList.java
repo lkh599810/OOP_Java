@@ -70,9 +70,9 @@ public abstract class LinkedList<T>{
     protected T get(int index){
         if(index>this.count || index<0){
             System.out.println("get() ERROR: index out of range");
-
         }
         Node currentNode=this.head;
+//        Node<T> currentNode=this.head;
         for(int i=0; i<index; i++){
             currentNode=currentNode.getNext();
         }
