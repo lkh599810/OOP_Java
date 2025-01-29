@@ -4,12 +4,12 @@ import datastructures.linearstructures.node.Node;
 
 import javax.sound.midi.Soundbank;
 
-public class Stack<T> extends LinkedList{
+public class Stack<T> extends LinkedList{//T떼도 됨.. object 특성으로 잘못짬...
 
     public Stack(){
         super();
     }
-    public void push(T value){
+    public void push(T value){//Object value
         if(value.getClass().equals(Integer.class)){
             super.appendIntegerNode((Integer)value);
         }
